@@ -9,7 +9,7 @@ import MetodoPago from "./components/MetodoPago"
 
 function App() {
  
-  const {order, addItem, removeItem, tip, setTip, SaveOrder} = useOrder()
+  const {order, addItem, removeItem, tip, setTip, SaveOrder, PagoDigital} = useOrder()
 
 
   return (
@@ -47,7 +47,8 @@ function App() {
                   tip={tip}
                 />
                  < MetodoPago
-                
+
+                 PagoDigital={PagoDigital}
                 />
 
                   <OrderTotal

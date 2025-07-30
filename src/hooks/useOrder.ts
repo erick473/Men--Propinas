@@ -48,12 +48,18 @@ export default function useOrder()
         setTip(0)
     }
 
+    function PagoDigital()
+    {
+       console.log("PagoDigital")
+    }
+
     return{
         order,
         tip,
         setTip,
         addItem,
         removeItem,
-        SaveOrder
+        SaveOrder,
+        PagoDigital
     }
 }
