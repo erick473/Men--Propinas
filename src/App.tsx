@@ -5,6 +5,7 @@ import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder"
 import OrderTotal from "./components/OrderTotal"
 import TipPorcentage from "./components/TipPorcentage"
+import MetodoPago from "./components/MetodoPago"
 
 function App() {
  
@@ -45,13 +46,16 @@ function App() {
                   setTip={setTip}
                   tip={tip}
                 />
+                 < MetodoPago
                 
+                />
 
                   <OrderTotal
                   order={order}
                   tip={tip}
                   SaveOrder={SaveOrder}
                 />
+               
               </>
 
 
