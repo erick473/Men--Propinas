@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# Calculadora de Propinas 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una **Calculadora de Propinas** interactiva donde el usuario puede seleccionar comidas de un menú, gestionar su carrito y calcular el pago final incluyendo una propina personalizada.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Menú de comidas**: el usuario puede seleccionar uno o varios platillos.
+- **Carrito interactivo**:
+  - Agregar y eliminar productos seleccionados.
+  - Visualizar el total de productos en tiempo real.
+- **Cálculo de propina**:
+  - Seleccionar el porcentaje de propina a aplicar.
+  - Mostrar el total final sumando productos + propina.
+- **Formato monetario**: se implementó una función personalizada para mostrar valores con el signo de pesos.
 
-## Expanding the ESLint configuration
+## 🛠Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** (con componentes funcionales)
+- **TypeScript**
+- **Tailwind CSS** (estilado rápido y responsive)
+- **React Hooks**:
+  - `useState`
+  - Hooks personalizados para la gestión de estados y lógica
+- **Formateo monetario** con función propia
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Estructura principal del proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Componente de Menú**: lista de platillos disponibles para seleccionar.
+- **Componente de Carrito**: muestra los productos seleccionados y permite eliminarlos.
+- **Componente de Propina**: selecciona el porcentaje y calcula el total.
+- **Lógica de cálculo**: suma de productos y propina formateada a moneda local.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Visuaizacion
+<img width="1378" height="868" alt="image" src="https://github.com/user-attachments/assets/5ece0d7f-2a48-4e30-b82d-2e19ad83c6e8" />
+<img width="1442" height="946" alt="image" src="https://github.com/user-attachments/assets/9135d2ae-f688-4fde-946c-bf57af02ea71" />
+<img width="1186" height="840" alt="image" src="https://github.com/user-attachments/assets/c83e7881-a05c-404a-99e3-ea9113ae5557" />
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
