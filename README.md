@@ -13,7 +13,7 @@ Este proyecto es una **Calculadora de Propinas** interactiva donde el usuario pu
   - Mostrar el total final sumando productos + propina.
 - **Formato monetario**: se implementó una función personalizada para mostrar valores con el signo de pesos.
 
-## 🛠Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **React** (con componentes funcionales)
 - **TypeScript**
